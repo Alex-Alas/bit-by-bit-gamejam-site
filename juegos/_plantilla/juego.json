@@ -1,0 +1,8 @@
+{
+  "titulo": "Título de tu juego",
+  "autores": ["Tu nombre o alias"],
+  "descripcion": "Una o dos frases: de qué trata y cómo se juega.",
+  "controles": "Flechas o toque en pantalla",
+  "herramientas_ia": ["Nombra aquí las herramientas de IA que usaste"],
+  "permiso_publicar": false
+}

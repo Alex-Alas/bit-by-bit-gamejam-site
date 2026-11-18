@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jugar · Bit-by-Bit GameJam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="visor">
+  <header>
+    <a href="./">← Juegos</a>
+    <h1 id="titulo">Cargando…</h1>
+    <a id="pantalla" href="#" hidden>Pantalla completa</a>
+  </header>
+  <iframe id="marco" title="Juego"
+    allow="fullscreen; autoplay; gamepad; accelerometer; gyroscope"
+    sandbox="allow-scripts allow-pointer-lock allow-forms allow-popups allow-modals"></iframe>
+  <script>
+    'use strict';
+    // El juego corre en un iframe con sandbox y SIN allow-same-origin: tiene un origen
+    // propio y no puede tocar el almacenamiento ni la página de los demás juegos.
+    // (Si un juego guarda datos con localStorage, debe tolerar que falle.)
+    const slug = new URLSearchParams(location.search).get('g') || '';
+    const t = document.getElementById('titulo');
+    if (!/^[a-z0-9][a-z0-9-]{1,40}$/.test(slug)) {
+      t.textContent = 'Juego no encontrado';
+    } else {
+      fetch('juegos/index.json').then(r => r.json()).then(d => {
+        const j = (d.juegos || []).find(x => x.slug === slug);
+        if (!j) { t.textContent = 'Juego no encontrado'; return; }
+        t.textContent = j.titulo;
+        document.title = j.titulo + ' · Bit-by-Bit GameJam';
+        const f = document.getElementById('marco');
+        f.src = 'juegos/' + slug + '/';
+        const b = document.getElementById('pantalla');
+        b.hidden = false;
+        b.onclick = e => { e.preventDefault(); (f.requestFullscreen || f.webkitRequestFullscreen || (() => {})).call(f); };
+      }).catch(() => { t.textContent = 'No se pudo cargar'; });
+    }
+  </script>
+</body>
+</html>
