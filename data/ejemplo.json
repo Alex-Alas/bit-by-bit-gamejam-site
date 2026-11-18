@@ -1,0 +1,20 @@
+{
+  "nombre": "Bit-by-Bit GameJam",
+  "edicion": "EJEMPLO (datos inventados)",
+  "fecha": "2026",
+  "lugar": "ESEN",
+  "descripcion": "Vista de ejemplo con datos inventados para revisar el diseño.",
+  "podio": [
+    { "puesto": 1, "categoria": "Mejor juego", "juego": "Juego de ejemplo A", "equipo": "Equipo ejemplo 1", "integrantes": ["Participante 1", "Participante 2"], "enlace": "" },
+    { "puesto": 2, "categoria": "Mejor juego", "juego": "Juego de ejemplo B", "equipo": "Equipo ejemplo 2", "integrantes": ["Participante 3"], "enlace": "" },
+    { "puesto": 3, "categoria": "Mejor juego", "juego": "Juego de ejemplo C", "equipo": "Equipo ejemplo 3", "integrantes": ["Participante 4", "Participante 5"], "enlace": "" }
+  ],
+  "participantes": [
+    { "nombre": "Participante 1", "juego": "Juego de ejemplo A", "enlace": "" },
+    { "nombre": "Participante 2", "juego": "Juego de ejemplo A", "enlace": "" },
+    { "nombre": "Participante 3", "juego": "Juego de ejemplo B", "enlace": "" },
+    { "nombre": "Participante 4", "juego": "Juego de ejemplo C", "enlace": "" },
+    { "nombre": "Participante 5", "juego": "Juego de ejemplo C", "enlace": "" },
+    { "nombre": "Participante 6", "juego": "Juego de ejemplo D", "enlace": "" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "juegos": [
+    {
+      "slug": "laberinto-gatuno",
+      "titulo": "Laberinto Gatuno",
+      "autores": [
+        "Alex"
+      ],
+      "descripcion": "Speedrun de laberinto donde no te mueves con flechas: cada salida abierta muestra una letra y tecleas la que corresponde a la dirección que quieres tomar. Cuidado con los gatos negros.",
+      "controles": "Teclado (letras de cada salida) o toque en pantalla en el teléfono",
+      "herramientas_ia": [
+        "Claude Code"
+      ]
+    }
+  ]
+}

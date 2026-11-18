@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bit-by-Bit GameJam</title>
+  <meta name="description" content="Participantes y podio del Bit-by-Bit GameJam.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="kicker" id="edicion">Bit-by-Bit GameJam</p>
+    <h1>Bit-by-Bit <span>GameJam</span></h1>
+    <p class="lead" id="descripcion"></p>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <main>
+    <div id="aviso" class="aviso" hidden></div>
+
+    <section aria-labelledby="t-juegos">
+      <h2 id="t-juegos">Juegos</h2>
+      <div id="juegos" class="juegos"></div>
+    </section>
+
+    <section aria-labelledby="t-podio">
+      <h2 id="t-podio">Podio</h2>
+      <div id="podio" class="podio"></div>
+    </section>
+
+    <section aria-labelledby="t-part">
+      <h2 id="t-part">Participantes</h2>
+      <p class="count" id="count"></p>
+      <ul id="participantes" class="grid"></ul>
+    </section>
+  </main>
+
+  <footer>Comunidad Bit-by-Bit GameJam · ESEN</footer>
+  <script src="app.js"></script>
+</body>
+</html>
